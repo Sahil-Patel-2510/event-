@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Event Plus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-shell">
+      <div class="auth-panel auth-visual">
+        <div class="brand auth-brand">
+          <span class="brand-mark">E+</span>
+          <span>Event Plus</span>
+        </div>
+        <h1>Register and start planning smarter.</h1>
+        <p>Use Event Plus to compare event ideas, contact vendors and ask for a custom budget in minutes.</p>
+      </div>
+
+      <div class="auth-panel auth-form-panel">
+        <div class="auth-header">
+          <p class="eyebrow">Create account</p>
+          <h2>Register for Event Plus</h2>
+        </div>
+
+        <form id="registerForm" class="auth-form">
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Enter your name" required />
+          </label>
+
+          <label>
+            Email Address
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+
+          <label>
+            Mobile Number
+            <input type="tel" name="phone" placeholder="Your contact number" required />
+          </label>
+
+          <label>
+            Password
+            <input type="password" name="password" placeholder="Create password" required />
+          </label>
+
+          <label>
+            Event Interest
+            <select name="interest" required>
+              <option value="">Select your interest</option>
+              <option>Birthday Party</option>
+              <option>Baby Shower</option>
+              <option>Baby Coming Home</option>
+              <option>Friend Party</option>
+              <option>Shop Opening</option>
+              <option>Engagement Function</option>
+              <option>Small Event</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn btn-primary full-width">Register</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+
+        <p class="switch-copy">
+          Already have an account?
+          <a href="login.html">Login here</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

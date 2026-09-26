@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Details | Event Plus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="event-details-body">
+    <header class="event-details-header">
+      <a href="dashboard.html" class="brand dashboard-brand"><span class="brand-mark">E+</span><span>Event Plus</span></a>
+      <a href="dashboard.html" class="back-link">← Back to dashboard</a>
+    </header>
+
+    <main class="event-details-main">
+      <section class="event-detail-hero">
+        <div class="event-detail-hero-copy">
+          <p class="dashboard-kicker">Your event, your way</p>
+          <h1 id="eventTitle">Birthday Party</h1>
+          <p id="eventDescription">Everything you need for a joyful and memorable celebration.</p>
+          <a id="goToPlanButton" class="btn btn-primary" href="event-packages.html">Go to plan <span>→</span></a>
+        </div>
+        <div class="event-detail-badge" id="eventIcon">🎂</div>
+      </section>
+
+      <section class="event-detail-content">
+        <div class="event-detail-heading">
+          <div><p class="dashboard-kicker">What is included</p><h2>Everything for a perfect event</h2></div>
+          <span id="eventTagline">Plan it beautifully</span>
+        </div>
+        <div class="included-grid" id="includedGrid"></div>
+
+        <div class="event-detail-bottom">
+          <section class="detail-panel">
+            <p class="dashboard-kicker">Make it extra special</p>
+            <h2>Popular add-ons</h2>
+            <ul class="addon-list" id="addonList"></ul>
+          </section>
+          <section class="detail-panel detail-help-panel">
+            <span class="detail-help-icon">✦</span>
+            <h2>Need something custom?</h2>
+            <p>Tell us your guest count, date and budget. Our team will prepare a package around your event.</p>
+            <a id="customPlanLink" class="dashboard-text-link" href="event-packages.html">Create custom plan <span>→</span></a>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

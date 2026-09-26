@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Event Plus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard-shell">
+      <aside class="dashboard-sidebar">
+        <a href="index.html" class="brand dashboard-brand">
+          <span class="brand-mark">E+</span>
+          <span>Event Plus</span>
+        </a>
+
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+          <a class="dashboard-nav-link active" href="#overview"><span>⌂</span> Overview</a>
+          <a class="dashboard-nav-link" href="#events"><span>◷</span> My events</a>
+          <a class="dashboard-nav-link" href="event-packages.html?type=birthday"><span>＋</span> Explore plans</a>
+          <a class="dashboard-nav-link" href="#activity"><span>↗</span> Activity</a>
+        </nav>
+
+        <div class="sidebar-note">
+          <span class="sidebar-note-icon">✦</span>
+          <strong>Need a hand?</strong>
+          <p>Our event team is ready to help you plan the details.</p>
+          <a href="event-packages.html?type=birthday">Get support <span>→</span></a>
+        </div>
+
+        <button id="logoutButton" class="dashboard-logout" type="button">↪ <span>Log out</span></button>
+      </aside>
+
+      <main class="dashboard-main" id="overview">
+        <header class="dashboard-topbar">
+          <button class="mobile-menu-button" type="button" aria-label="Toggle menu">☰</button>
+          <div class="dashboard-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="eventSearch" type="search" placeholder="Search events, plans or vendors" aria-label="Search dashboard" />
+            <kbd>/</kbd>
+          </div>
+          <div class="dashboard-user-menu">
+            <button class="notification-button" type="button" aria-label="Notifications">♧<i></i></button>
+            <div class="user-avatar" id="userAvatar">EP</div>
+            <div class="user-intro">
+              <strong id="userName">Event Planner</strong>
+              <span>Personal account</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <section class="dashboard-welcome">
+            <div>
+              <p class="dashboard-kicker">Sunday, September 13, 2026</p>
+              <h1>Good morning, <span id="welcomeName">Planner</span>.</h1>
+              <p>Here is what is happening with your celebrations.</p>
+            </div>
+            <a href="event-packages.html?type=birthday" class="btn btn-primary">+ Plan an event</a>
+          </section>
+
+          <section class="event-type-section" id="eventTypes" aria-label="Choose an event type">
+            <div class="section-title-row">
+              <div>
+                <p class="dashboard-kicker">Plan your celebration</p>
+                <h2>Choose an event type</h2>
+              </div>
+              <span class="event-count">7 event options</span>
+            </div>
+            <div class="event-type-grid">
+              <a class="event-type-card type-purple" href="event-details.html?type=birthday" data-search="birthday party"><span class="event-type-icon">🎂</span><span><strong>Birthday Party</strong><small>Make their day special</small></span><b>→</b></a>
+              <a class="event-type-card type-peach" href="event-details.html?type=baby-shower" data-search="baby shower"><span class="event-type-icon">🎀</span><span><strong>Baby Shower</strong><small>Celebrate the new arrival</small></span><b>→</b></a>
+              <a class="event-type-card type-blue" href="event-details.html?type=baby-home" data-search="baby coming home coming home"><span class="event-type-icon">🏡</span><span><strong>Baby Coming Home</strong><small>A warm family welcome</small></span><b>→</b></a>
+              <a class="event-type-card type-yellow" href="event-details.html?type=friend-party" data-search="friend party friends party"><span class="event-type-icon">🥳</span><span><strong>Friend Party</strong><small>Good times together</small></span><b>→</b></a>
+              <a class="event-type-card type-green" href="event-details.html?type=shop-opening" data-search="shop opening"><span class="event-type-icon">🏪</span><span><strong>Shop Opening</strong><small>Start with a grand launch</small></span><b>→</b></a>
+              <a class="event-type-card type-pink" href="event-details.html?type=engagement" data-search="engagement function engagement"><span class="event-type-icon">💍</span><span><strong>Engagement Function</strong><small>Your beautiful beginning</small></span><b>→</b></a>
+              <a class="event-type-card type-lilac" href="event-details.html?type=small-event" data-search="small event any small event"><span class="event-type-icon">✨</span><span><strong>Any Small Event</strong><small>Intimate moments, done right</small></span><b>→</b></a>
+            </div>
+            <p class="empty-event-state" id="emptyEventTypeState">No event type found. Try a different search.</p>
+          </section>
+
+          <section class="dashboard-section" id="events">
+            <div class="section-title-row">
+              <div>
+                <p class="dashboard-kicker">Visual inspiration</p>
+                <h2>Event gallery</h2>
+              </div>
+              <a href="event-packages.html?type=birthday" class="dashboard-text-link">Explore all plans <span>→</span></a>
+            </div>
+
+            <div class="event-gallery" id="eventList">
+              <article class="event-photo-card event-row" data-search="birthday party celebration cake">
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Birthday cake celebration" />
+                <div class="event-photo-overlay"><span>Birthday Party</span><strong>Make it unforgettable</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="baby shower pastel celebration">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Pastel party decorations" />
+                <div class="event-photo-overlay"><span>Baby Shower</span><strong>Sweet beginnings</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="baby coming home family welcome">
+                <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Family celebration at home" />
+                <div class="event-photo-overlay"><span>Baby Coming Home</span><strong>Welcome home</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="friend party friends celebration">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Friends celebrating together" />
+                <div class="event-photo-overlay"><span>Friend Party</span><strong>Good times together</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="shop opening launch business">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Shop opening display" />
+                <div class="event-photo-overlay"><span>Shop Opening</span><strong>Open with impact</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="engagement function ring wedding">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Elegant engagement setup" />
+                <div class="event-photo-overlay"><span>Engagement Function</span><strong>Your beautiful beginning</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="small event intimate dinner">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Intimate event dinner" />
+                <div class="event-photo-overlay"><span>Any Small Event</span><strong>Small moments, big memories</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="decor event flowers setup">
+                <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Decorated event table" />
+                <div class="event-photo-overlay"><span>Event Decor</span><strong>Details that shine</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="party lights celebration decor">
+                <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Party lights and decorations" />
+                <div class="event-photo-overlay"><span>Celebration Night</span><strong>Set the mood</strong></div>
+              </article>
+              <article class="event-photo-card event-row" data-search="wedding event flowers venue">
+                <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Wedding event venue" />
+                <div class="event-photo-overlay"><span>Premium Events</span><strong>Beautifully planned</strong></div>
+              </article>
+              <p class="empty-event-state" id="emptyEventState">No events found. Try a different search.</p>
+            </div>
+          </section>
+
+          <div class="dashboard-lower-grid">
+            <section class="dashboard-panel" id="activity">
+              <div class="section-title-row"><div><p class="dashboard-kicker">Stay up to date</p><h2>Recent activity</h2></div><button class="panel-icon-button" type="button" aria-label="More activity">•••</button></div>
+              <div class="activity-list">
+                <div class="activity-item"><span class="activity-dot dot-purple">✓</span><div><strong>Budget request submitted</strong><p>Aarav's Birthday Party</p></div><time>2h ago</time></div>
+                <div class="activity-item"><span class="activity-dot dot-peach">✦</span><div><strong>New plan recommendation</strong><p>3 vendors match your event</p></div><time>Yesterday</time></div>
+                <div class="activity-item"><span class="activity-dot dot-green">↗</span><div><strong>Payment milestone reached</strong><p>Priya &amp; Rohan Engagement</p></div><time>Sep 09</time></div>
+              </div>
+            </section>
+
+            <section class="dashboard-panel inspiration-panel">
+              <div class="inspiration-art"><span>✦</span><span>✧</span><span>✺</span><strong>Make it<br />memorable</strong></div>
+              <div class="inspiration-copy"><p class="dashboard-kicker">For your next event</p><h2>Find your perfect celebration style.</h2><a href="event-packages.html?type=birthday" class="dashboard-text-link">Explore ideas <span>→</span></a></div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

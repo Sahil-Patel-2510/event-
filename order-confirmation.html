@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Event | Event Plus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="order-page-body">
+    <header class="event-details-header">
+      <a href="dashboard.html" class="brand dashboard-brand"><span class="brand-mark">E+</span><span>Event Plus</span></a>
+      <a href="event-packages.html" class="back-link">← Back to packages</a>
+    </header>
+
+    <main class="order-page-main">
+      <section class="order-page-heading">
+        <div><p class="dashboard-kicker">Step 3 of 3</p><h1>Confirm your event</h1><p>Enter your details and verify your contact before confirming the order.</p></div>
+        <div class="selected-package-summary"><span id="selectedPackageIcon">🎂</span><div><small>Selected package</small><strong id="selectedPackageName">Package 1</strong><span id="selectedPackageMeta">Up to 50 people</span></div></div>
+      </section>
+
+      <form id="budgetForm" class="order-form">
+        <section class="order-form-panel">
+          <div class="order-section-title"><span>01</span><div><p class="dashboard-kicker">Your information</p><h2>Contact details</h2></div></div>
+          <div class="form-two-column">
+            <label>Full Name<input type="text" name="name" placeholder="Enter your full name" required /></label>
+            <label>Mobile Number<input type="tel" name="phone" placeholder="Enter your mobile number" required /></label>
+            <label>Email Address<input type="email" name="email" placeholder="you@example.com" required /></label>
+            <label>Event Type<select name="eventType" required><option value="">Select event</option><option>Birthday Party</option><option>Baby Shower</option><option>Baby Coming Home</option><option>Friend Party</option><option>Shop Opening</option><option>Engagement Function</option><option>Small Event</option><option>Other</option></select></label>
+          </div>
+        </section>
+
+        <section class="order-form-panel">
+          <div class="order-section-title"><span>02</span><div><p class="dashboard-kicker">Event location</p><h2>Address confirmation</h2></div></div>
+          <div class="form-two-column">
+            <label>Event Address<textarea name="address" rows="3" placeholder="Enter complete event address" required></textarea></label>
+            <label>Confirm Address<textarea name="confirmAddress" rows="3" placeholder="Enter the same address again" required></textarea></label>
+          </div>
+        </section>
+
+        <section class="order-form-panel">
+          <div class="order-section-title"><span>03</span><div><p class="dashboard-kicker">Food preference</p><h2>Choose your food menu</h2></div></div>
+          <label>Do you want catering?<select name="cateringRequired" id="cateringSelect" required><option value="">Choose an option</option><option value="Yes">Yes, include catering</option><option value="No">No, I will arrange food</option></select></label>
+          <fieldset class="catering-fields" id="cateringFields" hidden><legend>Choose your food menu</legend><p class="field-help">Select one or more cuisines. We will confirm the final menu with you.</p><div class="cuisine-grid">
+            <label class="choice-card"><input type="checkbox" name="cuisine" value="Gujarati" /><span>🍛</span><strong>Gujarati</strong></label>
+            <label class="choice-card"><input type="checkbox" name="cuisine" value="Punjabi" /><span>🫓</span><strong>Punjabi</strong></label>
+            <label class="choice-card"><input type="checkbox" name="cuisine" value="Idli / Sambhar" /><span>🥣</span><strong>Idli / Sambhar</strong></label>
+            <label class="choice-card"><input type="checkbox" name="cuisine" value="Chinese" /><span>🥡</span><strong>Chinese</strong></label>
+            <label class="choice-card"><input type="checkbox" name="cuisine" value="Pizza" /><span>🍕</span><strong>Pizza</strong></label>
+            <label class="choice-card"><input type="checkbox" name="cuisine" value="Pani Puri" /><span>🥗</span><strong>Pani Puri</strong></label>
+            <label class="choice-card"><input type="checkbox" name="cuisine" value="Dosa" /><span>🥞</span><strong>Dosa</strong></label>
+            <label class="choice-card"><input type="checkbox" name="cuisine" value="Other" /><span>🍽️</span><strong>Other</strong></label>
+          </div><label class="other-food-field">Other food or special request<input type="text" name="otherFood" placeholder="e.g. Jain food, live counter, sweets" /></label></fieldset>
+        </section>
+
+        <section class="order-form-panel">
+          <div class="order-section-title"><span>04</span><div><p class="dashboard-kicker">Package details</p><h2>Final order information</h2></div></div>
+          <div class="form-two-column">
+            <label>Number of Guests<input type="number" name="guestCount" id="guestCountInput" min="1" max="200" required /></label>
+            <label>Select Package<select name="package" id="packageSelect" required><option value="Package 1" data-guests="50" data-budget="₹14,500" data-no-catering-budget="₹10,000">Package 1 · 50 people · ₹14,500</option><option value="Package 2" data-guests="100" data-budget="₹26,000" data-no-catering-budget="₹18,000">Package 2 · 100 people · ₹26,000</option><option value="Package 3" data-guests="150" data-budget="₹38,000" data-no-catering-budget="₹26,000">Package 3 · 150 people · ₹38,000</option><option value="Package 4" data-guests="200" data-budget="₹52,000" data-no-catering-budget="₹36,000">Package 4 · 200 people · ₹52,000</option></select></label>
+          </div>
+          <label>Confirmed Budget<input type="text" name="budget" id="budgetInput" readonly required /></label>
+        </section>
+
+        <label class="confirm-order-checkbox">
+          <input type="checkbox" id="finalConfirmationCheck" />
+          <span>I confirm that the package, event details, and budget are correct before placing this order.</span>
+        </label>
+
+        <div id="missingFieldsPanel" class="missing-fields-panel hidden" aria-live="polite">
+          <h3>Missing details</h3>
+          <ul id="missingFieldsList"></ul>
+        </div>
+
+        <button type="submit" class="btn btn-primary confirm-order-button" id="confirmOrderButton" disabled>Confirm Order <span>→</span></button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

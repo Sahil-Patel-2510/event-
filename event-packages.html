@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Packages | Event Plus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="event-plan-body">
+    <header class="event-details-header">
+      <a href="dashboard.html" class="brand dashboard-brand"><span class="brand-mark">E+</span><span>Event Plus</span></a>
+      <a href="dashboard.html" class="back-link">← Back to dashboard</a>
+    </header>
+
+    <main class="event-plan-main">
+      <section class="event-plan-heading">
+        <div>
+          <p class="dashboard-kicker">Choose your package</p>
+          <h1><span id="planEventIcon">🎂</span> <span id="planEventTitle">Birthday Party Plans</span></h1>
+          <p id="planEventDescription">Select the guest capacity that fits your celebration.</p>
+        </div>
+        <span class="plan-step">Step 2 of 3</span>
+      </section>
+
+      <section class="package-section" aria-label="Packages with catering">
+        <div class="package-section-heading"><div><span class="package-section-icon">🍽️</span><div><p class="dashboard-kicker">Food included</p><h2>With Catering / Mess</h2></div></div><span>Menu, snacks, drinks and water included</span></div>
+        <div class="package-grid">
+          <article class="event-package-card"><span class="package-label">Starter</span><h2>Package 1</h2><p class="package-guests">Up to <strong>50 people</strong></p><strong class="package-price">₹14,500</strong><ul><li>Basic decoration</li><li>Snacks, water and welcome drinks</li><li>Choose your food menu</li><li>Music and lighting setup</li></ul><a class="btn btn-primary package-choose" data-catering="Yes" href="order-confirmation.html">Choose Package 1 <span>→</span></a></article>
+          <article class="event-package-card package-featured"><span class="package-label">Most popular</span><h2>Package 2</h2><p class="package-guests">Up to <strong>100 people</strong></p><strong class="package-price">₹26,000</strong><ul><li>Theme decoration and backdrop</li><li>Catering, snacks and welcome drinks</li><li>Sound, lighting and seating</li><li>Photography moments</li></ul><a class="btn btn-primary package-choose" data-catering="Yes" href="order-confirmation.html">Choose Package 2 <span>→</span></a></article>
+          <article class="event-package-card"><span class="package-label">Celebration</span><h2>Package 3</h2><p class="package-guests">Up to <strong>150 people</strong></p><strong class="package-price">₹38,000</strong><ul><li>Premium décor and photo corner</li><li>Full menu and dessert counter</li><li>Stage, sound and lighting</li><li>Dedicated event support</li></ul><a class="btn btn-primary package-choose" data-catering="Yes" href="order-confirmation.html">Choose Package 3 <span>→</span></a></article>
+          <article class="event-package-card"><span class="package-label">Grand</span><h2>Package 4</h2><p class="package-guests">Up to <strong>200 people</strong></p><strong class="package-price">₹52,000</strong><ul><li>Complete premium event design</li><li>Multi-cuisine catering and dessert</li><li>Stage, DJ and full lighting</li><li>Photography and guest service</li></ul><a class="btn btn-primary package-choose" data-catering="Yes" href="order-confirmation.html">Choose Package 4 <span>→</span></a></article>
+        </div>
+      </section>
+
+      <section class="package-section package-section-no-catering" aria-label="Packages without catering">
+        <div class="package-section-heading"><div><span class="package-section-icon">🚫</span><div><p class="dashboard-kicker">Food not included</p><h2>Without Catering / Mess</h2></div></div><span>You arrange food; decoration and event setup included</span></div>
+        <div class="package-grid">
+          <article class="event-package-card"><span class="package-label">Starter</span><h2>Package 1</h2><p class="package-guests">Up to <strong>50 people</strong></p><strong class="package-price">₹10,000</strong><ul><li>Basic decoration</li><li>Seating and serving tables</li><li>Music and lighting setup</li><li>Event coordination</li></ul><a class="btn btn-primary package-choose" data-catering="No" href="order-confirmation.html">Choose Package 1 <span>→</span></a></article>
+          <article class="event-package-card"><span class="package-label">Popular</span><h2>Package 2</h2><p class="package-guests">Up to <strong>100 people</strong></p><strong class="package-price">₹18,000</strong><ul><li>Theme decoration and backdrop</li><li>Tables, seating and water setup</li><li>Sound and lighting</li><li>Event support</li></ul><a class="btn btn-primary package-choose" data-catering="No" href="order-confirmation.html">Choose Package 2 <span>→</span></a></article>
+          <article class="event-package-card"><span class="package-label">Celebration</span><h2>Package 3</h2><p class="package-guests">Up to <strong>150 people</strong></p><strong class="package-price">₹26,000</strong><ul><li>Premium décor and photo corner</li><li>Full seating and guest arrangement</li><li>Stage, sound and lighting</li><li>Dedicated event support</li></ul><a class="btn btn-primary package-choose" data-catering="No" href="order-confirmation.html">Choose Package 3 <span>→</span></a></article>
+          <article class="event-package-card"><span class="package-label">Grand</span><h2>Package 4</h2><p class="package-guests">Up to <strong>200 people</strong></p><strong class="package-price">₹36,000</strong><ul><li>Complete premium event design</li><li>Stage, DJ and full lighting</li><li>Guest service and coordination</li><li>Photography and clean-up</li></ul><a class="btn btn-primary package-choose" data-catering="No" href="order-confirmation.html">Choose Package 4 <span>→</span></a></article>
+        </div>
+      </section>
+
+      <section class="plan-note"><span>✦</span><p>Choose with catering if you want food, snacks, drinks and water included. Choose without catering if you will arrange the menu yourself.</p></section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

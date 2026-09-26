@@ -1,0 +1,27 @@
+{
+  "name": "event-plus",
+  "version": "1.0.0",
+  "description": "Event Plus website with MongoDB-backed user and enquiry storage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "event",
+    "website",
+    "mongodb",
+    "nodejs",
+    "express"
+  ],
+  "author": "Event Plus",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb-memory-server": "^9.3.0",
+    "mongoose": "^8.5.1",
+    "nodemailer": "^10.0.9"
+  }
+}
